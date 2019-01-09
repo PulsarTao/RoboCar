@@ -73,7 +73,7 @@ licenses
 > Our Team    
 > Zhijia Tao
 > QQ:2571440661  
-> Yuan Feng  
+> Yuan Feng
 > 897855468  
 > ZhenYu Ji
 > QQ:804266219  
