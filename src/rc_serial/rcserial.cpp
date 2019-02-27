@@ -14,7 +14,6 @@ int RC::Serial::recive(char *buffer, int size) {
             printf("read data error!!\n");
             return -2;
         }
-//        memset(buffer, 0, sizeof(size));
     }
     return -1;
 }
@@ -33,6 +32,18 @@ int RC::Serial::send(long comm) {
     if (wr_num)return 1;
     return 0;
 
+}
+
+int RC::Serial::data_encode(int data){
+
+    return 0;
+}
+int RC::Serial::data_encode(char data){
+    return 0;
+}
+
+int RC::Serial::data_encode(std::string data){
+    return 0;
 }
 
 int RC::set_serial(int fd, int nSpeed, int nBits, char nEvent, int nStop) {

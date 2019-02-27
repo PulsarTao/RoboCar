@@ -6,18 +6,21 @@
 #define ROBOCAR_RC_GLOBAL_WHEEL_H
 #include "rc_global.h"
 //wheel serial commond
-#define RC_WHEEL_1_FORWARD "a"
-#define RC_WHEEL_1_BACKWARD "b"
-#define RC_WHEEL_2_FORWARD "c"
-#define RC_WHEEL_2_BACKWARD "d"
-#define RC_WHEEL_3_FORWARD "e"
-#define RC_WHEEL_3_BACKWARD "f"
+#define RC_WHEEL_1_FORWARD "010000000000000"
+#define RC_WHEEL_1_BACKWARD "110000000000000"
 
-#define RC_WHEEL_GO_FORWARD "g"
-#define RC_WHEEL_GO_BACKWARD "h"
+#define RC_WHEEL_2_FORWARD "000001100000000"
+#define RC_WHEEL_2_BACKWARD "000000100000000"
+#define RC_WHEEL_3_FORWARD "000000000001000"
+#define RC_WHEEL_3_BACKWARD "000000000011000"
 
-#define RC_WHEEL_CW "i"
-#define RC_WHEEL_AC "j"
+#define RC_WHEEL_GO_FORWARD "000000100001000"
+#define RC_WHEEL_GO_BACKWARD "000001100011000"
+
+#define RC_WHEEL_CW "010001100001000"
+#define RC_WHEEL_AC "110000100011000"
+
+#define RC_WHEEL_STOP "000000000000000"
 
 #define RC_MOVE_DEVICE_PORT_INITATION_ERROR (char *) "You should be initation the camera index before start"
 #define RC_OPEN_CAMERA_ERROR (char *) "Can not open such device or video"

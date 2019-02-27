@@ -191,7 +191,7 @@ int main(int argc, char **argv) {
     u_result op_result;
     bool useArgcBaudrate = false;
 
-    opt_com_path = "/dev/ttyUSB0";
+    opt_com_path = "/dev/ttyUSB1";
     bool connectSuccess = false;
     rplidar_response_device_info_t devinfo;
 

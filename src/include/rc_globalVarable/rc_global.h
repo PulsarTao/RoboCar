@@ -11,6 +11,10 @@
 #define RC_PLAY_BY_CAMERA 0
 #define RC_PLAY_BY_VIDEO 1
 
+//#define RC_BODY_CASCADES_FILE_PATH "./haarcascades/haarcascade_fullbody.xml"
+#define RC_BODY_CASCADES_FILE_PATH "./haarcascades/haarcascade_frontalcatface.xml"
+#define RC_FACE_CASCADES_FILE_PATH "./haarcascades/haarcascade_frontalcatface.xml"
+
 #ifdef __linux__
 #define RC_NULL_POINT nullptr
 #endif

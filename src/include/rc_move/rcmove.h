@@ -37,6 +37,8 @@ namespace RC {
 
         void wheel_go_backward();
 
+        void wheel_stop();
+
         void wheel_CW();//顺时针
         void wheel_AC();//逆时针
     private:
@@ -46,6 +48,7 @@ namespace RC {
         int type = 0;
         char *mapping=NULL;
         bool AutoMove=false;
+        bool AutoFollow= false;
         int init_serial_device(char *device);
     };
 }

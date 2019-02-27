@@ -13,16 +13,21 @@ int RC::LOG::printlog(char *logType,std::string str) {
     return 1;
 }
 int RC::LOG::logSuccess(char *str) {
-    RC::LOG::printlog((char*)"[SUCCESS] ",str);
+    std::string _s=str;
+    _s="\033[1;32;32m"+_s+"\033[0m";
+    RC::LOG::printlog((char*)"\033[1;32;32m[SUCCESS] \033[0m",str);
     return 1;
 }
 int RC::LOG::logError(char *str) {
-    RC::LOG::printlog((char*)"[ERROR] ",str);
+//    std::cout<<"\033[33mHello \033[34mworld!\033[0m"<<std::endl;
+    std::string _s=str;
+    _s="\033[1;32;31m"+_s+"\033[0m";
+    RC::LOG::printlog((char*)"\033[1;32;31m[ERROR] \033[0m",_s.c_str());
     return 0;
 }
 
 int RC::LOG::logInfo(char *str) {
-    RC::LOG::printlog((char*)"[INFO] ",str);
+    RC::LOG::printlog((char*)"\033[1;32;34m[INFO] \033[0m",str);
     return 1;
 }
 int RC::LOG::logDebug(char *str) {

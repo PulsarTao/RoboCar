@@ -51,8 +51,7 @@ Mat Detcet::detcetSingal(Mat frame) {
     }
     return frame;
 }
-void Detcet::drawDetectLines(Mat& image,const vector<Vec4i>& lines,Scalar & color)
-{
+void Detcet::drawDetectLines(Mat& image,const vector<Vec4i>& lines,Scalar & color) {
     // 将检测到的直线在图上画出来
     vector<Vec4i>::const_iterator it=lines.begin();
     while(it!=lines.end())

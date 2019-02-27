@@ -13,8 +13,8 @@
 #define RC_SERIAL_SEARCH_SIZE 2
 #define RC_SERIAL_SUB_BIT {'\r','\n'}
 //USB serial open state output
-#define RC_SERIAL_STRING_USB_OPEN_ERROR (char*)"Cant open USB COM"
-#define RC_SERIAL_SREING_USB_OPEN_SUCCESS (char*)"Open USB serial"
+#define RC_SERIAL_STRING_USB_OPEN_ERROR (char*)"Cant Open Serial Device"
+#define RC_SERIAL_SREING_USB_OPEN_SUCCESS (char*)"Open Serial Device"
 #define RC_SERIAL_ERROR -1
 #define RC_SERIAL_MAX_RECIVE_BUFFER_SIZE 64
 //JY901 COMMMOND

@@ -1,5 +1,8 @@
 
-set(RC_MOVE_FILES ${PROJECT_SOURCE_DIR}/src/rc_move/rcmove.cpp)
+set(RC_MOVE_FILES
+        ${PROJECT_SOURCE_DIR}/src/rc_move/rcmove.cpp
+        ${PROJECT_SOURCE_DIR}/src/rc_move/rc_move_wheel.cpp
+        )
 
 if (RC_LIB STREQUAL "OFF")
     set(LIB_NAME rcmove)

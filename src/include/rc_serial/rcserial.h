@@ -5,24 +5,22 @@
 #ifndef ROBOCAR_RCSERIAL_H
 #define ROBOCAR_RCSERIAL_H
 
-#include <map>
-#include <string>
 #include <rc_log/rclog.h>
 #include <fcntl.h>
 #include <iostream>
 #include <rc_globalVarable/rc_global_serial.h>
 #include <rc_serial/imu_device/JY901.h>
-
+#include <map>
 #ifdef __linux__
 
-#include <stdio.h>   /*标准输入输出的定义*/
-#include <errno.h>  /*错误号定义*/
+#include <stdio.h>
+#include <errno.h>
 #include <sys/stat.h>
-#include <fcntl.h>  /*文件控制定义*/
-#include <termios.h>    /*PPSIX 终端控制定义*/
-#include <stdlib.h> /*标准函数库定义*/
+#include <fcntl.h>
+#include <termios.h>
+#include <stdlib.h>
 #include <sys/types.h>
-#include <unistd.h> /*UNIX 标准函数定义*/
+#include <unistd.h>
 #include <termios.h>
 #include <zconf.h>
 #include <linux/serial.h>
@@ -50,6 +48,10 @@ namespace RC {
         bool isOpend();
 
         int release();
+
+        static int data_encode(int data);
+        static int data_encode(char data);
+        static int data_encode(std::string data);
 
     private:
         int device_point;

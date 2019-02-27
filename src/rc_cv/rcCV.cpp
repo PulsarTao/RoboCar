@@ -3,6 +3,8 @@
 //
 
 #include <rc_cv/rcCV.h>
+#include <rc_log/rclog.h>
+
 void RC::CV::fillter_8UC1(int max, cv::Mat *gray) {
     cv::MatIterator_<uchar> it, end;
     for (it = gray->begin<uchar>(), end = gray->end<uchar>(); it != end; ++it) {
@@ -157,14 +159,19 @@ std::vector<cv::Rect> RC::CV::detcetFace(cv::Mat src) {
     return faces;
 }
 
-std::vector<cv::Rect> RC::CV::detcetBody(cv::Mat src) {
-    cv::CascadeClassifier body_cascade;
-    if( !body_cascade.load( "./haarcascades/haarcascade_fullbody.xml" ) ){ printf("--(!)Error loading face cascade\n");}
+int RC::CV::BodyDetceter::init_body_cascade(std::string file_path) {
+    if( !this->body_cascade.load( file_path) ){
+        LOG::logError("Loading face cascade");
+    } else{
+        LOG::logSuccess("Loading face cascade");
+    }
+}
+std::vector<cv::Rect> RC::CV::BodyDetceter::detcetBody(cv::Mat src) {
     std::vector<cv::Rect> bodies;
     cv::Mat frame_gray;
     cv::cvtColor(src, frame_gray, cv::COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
-    body_cascade.detectMultiScale(frame_gray, bodies, 1.1, 2, 0, cv::Size(30, 30));
+    this->body_cascade.detectMultiScale(frame_gray, bodies, 1.1, 2, 0, cv::Size(30, 30));
     return bodies;
 }
 //TODO:TEST
