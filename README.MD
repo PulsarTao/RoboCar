@@ -8,6 +8,8 @@
 > 6. GTK3+  
 > 7. CUDA9.1(可选)  
 
+## [演示视屏地址](https://www.bilibili.com/video/av45616046/)  
+
 # 关于外设  about dvice
 1. STM32/Arduino/MSP430  
 2. 思岚激光雷达 Slamtec rplidar A2
@@ -74,7 +76,7 @@ licenses
 > Zhijia Tao
 > QQ:2571440661  
 > Yuan Feng
-> 897855468  
+> QQ:897855468  
 > ZhenYu Ji
 > QQ:804266219  
 > SiYu Yan
