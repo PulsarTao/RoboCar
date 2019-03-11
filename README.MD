@@ -17,9 +17,9 @@
 4. Emotiv脑电波耳机(可选)  emotiv brain wave headset
 
 #外设交互格式  
-alpha:脑电波alpha波  brain wave alpha wave
-gama:脑电波gama波  brain wave gama wave
-beta:脑电波beta波  brain wave beta wave
+alpha:脑电波alpha波  brain wave alpha wave    
+gama:脑电波gama波  brain wave gama wave  
+beta:脑电波beta波  brain wave beta wave   
 ```
 {
 	"alpha":alpha,
